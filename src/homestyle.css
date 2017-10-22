@@ -8,3 +8,16 @@ background-position: top center !important;
 background-repeat: no-repeat !important;
 background-attachment: fixed;
 }
+
+.logo1 {
+  text-align: center;
+  padding-top: 300px;
+  padding-left: 300px;
+  padding-right: 300px;
+}
+
+.slogan{
+  text-align: center;
+  padding-top: 10px;
+  padding-left: 300px;
+}
