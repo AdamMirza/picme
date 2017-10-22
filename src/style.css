@@ -1,7 +1,8 @@
 body {
-  background-color: #ff6666;
-  font-family: 'Montserrat', sans-serif;
-  color: #ffffff;
+  background-color: #ff6666 !important;
+  font-family: 'Montserrat', sans-serif !important;
+  color: #ffffff !important;
+  font-size: 18pt !important;
 }
 
 .logo {
@@ -9,8 +10,13 @@ body {
   padding-top: 30px;
 }
 
-#menu {
-  width: 80%;
+h2 {
+  text-align: center;
+}
+
+thead {
+  background-color: #ba3142;
+  color: #ffffff;
 }
 
 .container img {
@@ -18,16 +24,28 @@ body {
     height: auto;
 }
 
-table, th, td {
-    border: 1px solid white;
-    border-collapse: collapse;
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+  background-color: #f28f99;
+  color: #ffffff;
 }
 
-th,td {
-  padding: 15px;
+.picture {
   text-align: center;
 }
 
-table{
-  border-spacing: 5px;
+.table {
+    table-layout:fixed;
+    background-color: #ffffff;
+    color: #ff6666;
+}
+
+.table td {
+  white-space: wrap;
+  overflow: hidden;
+  text-overflow: clip;
+  word-wrap: break-word;
+}
+
+.table-responsive {
+  height:280px;
 }

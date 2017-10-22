@@ -6,49 +6,122 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="jquery-3.2.1.js"></script>
     <script src="index.js"></script>
+    <script src="menu.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <title>PikoMenu</title>
   </head>
-
-  <script type="text/javascript">
-    function makeTableScroll() {
-        // Constant retrieved from server-side via JSP
-        var maxRows = 4;
-
-        var table = document.getElementById('myTable');
-        var wrapper = table.parentNode;
-        var rowsInTable = table.rows.length;
-        var height = 0;
-        if (rowsInTable > maxRows) {
-            for (var i = 0; i < maxRows; i++) {
-                height += table.rows[i].clientHeight;
-            }
-            wrapper.style.height = height + "px";
-        }
-    }
-</script>
-
   <body>
-    <div class="logo">
-      <img src="PikoMenu.png" width="300px" />
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="logo">
+            <img src="PikoMenu.png" width="300px" />
+          </div>
+        </div>
+      </div>
+      <div>
+        <h2>Did somebody say&nbsp;.&nbsp;.&nbsp;.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;food?</h2>
+      </div>
+      <div class="container" id="search-bar">
+      	<div class="row">
+          <div class="col-md-4"></div>
+          <div class="input-group col-md-4">
+            <input type="text" class="form-control" placeholder="Search" />
+            <span class="input-group-btn">
+            <button class="btn" type="button">
+              <span class=" glyphicon glyphicon-search"></span>
+            </button>
+            </span>
+          </div>
+          <div class="col-md-4"></div>
+      	</div>
+      </div>
+      <br/>
+      <div class="container">
+        <div class="row">
+          <div class="table-responsivetable-panel panel-default">
+            <table class="table table-hover table-bordered ">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Picture</th>
+                  <th>Price</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody id="myTable">
+                <tr>
+                  <td>Hot Dog</td>
+                  <td class="picture"><img src="hotdog.jpg" /></td>
+                  <td>$3.00</td>
+                  <td>A hot dog, also known as a frankfurter or wiener, is a cooked sausage, grilled and served in a partially sliced bun.</td>
+                </tr>
+                <tr>
+                  <td>Table cell</td>
+                  <td>Table cell</td>
+                  <td>Table cell</td>
+                  <td>Table cell</td>
+                </tr>
+                <tr>
+                  <td>Table cell</td>
+                  <td>Table cell</td>
+                  <td>Table cell</td>
+                  <td>Table cell</td>
+                </tr>
+                <tr>
+                  <td>Table cell</td>
+                  <td>Table cell</td>
+                  <td>Table cell</td>
+                  <td>Table cell</td>
+                </tr>
+                <tr>
+                  <td>Table cell</td>
+                  <td>Table cell</td>
+                  <td>Table cell</td>
+                  <td>Table cell</td>
+                </tr>
+                <tr>
+                  <td>Table cell</td>
+                  <td>Table cell</td>
+                  <td>Table cell</td>
+                  <td>Table cell</td>
+                </tr>
+                <tr>
+                  <td>Table cell</td>
+                  <td>Table cell</td>
+                  <td>Table cell</td>
+                  <td>Table cell</td>
+                </tr>
+                 <tr>
+                  <td>Table cell</td>
+                  <td>Table cell</td>
+                  <td>Table cell</td>
+                  <td>Table cell</td>
+                </tr>
+                <tr>
+                  <td>Table cell</td>
+                  <td>Table cell</td>
+                  <td>Table cell</td>
+                  <td>Table cell</td>
+                </tr>
+                <tr>
+                  <td>Table cell</td>
+                  <td>Table cell</td>
+                  <td>Table cell</td>
+                  <td>Table cell</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-md-12 text-center">
+          <ul class="pagination pagination-lg pager" id="myPager"></ul>
+          </div>
+    	</div>
     </div>
-    <div>
-      <h1>Did somebody say&nbsp;.&nbsp;.&nbsp;.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;food?</h1>
     </div>
-    <table id="menu">
-      <tr>
-        <th>Name</th>
-        <th>Picture</th>
-        <th>Price</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>Hotdog</td>
-        <td> <div class="container">
-             <img src="hotdog.jpg" />
-             </div>
-        </td>
-        <td>$3 </td>
-        <td> A hot dog, also known as a frankfurter or wiener, is a cooked sausage, grilled and served in a partially sliced bun.</td>
-      </tr>
   </body>
 </html>
