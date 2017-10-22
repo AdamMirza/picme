@@ -1,6 +1,8 @@
 $(document).ready(function(){
-  $(document).click(function(){
+  $(document).click(function(e){
     //animation
-    //switch windows
+    if (e.button == 0 ) {
+      window.location.href="./index.html";
+    }
   });
 });
