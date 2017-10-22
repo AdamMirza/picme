@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="jquery-3.2.1.js"></script>
-    <script src="index.js"></script>
-    <script src="menu.js"></script>
+    <!--<script src="menu.js"></script>-->
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBGJsDzaRdAZOJXAP4lkeEcYvOns3mXdNI&libraries=places"></script>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -28,23 +28,29 @@
       </div>
       <div class="container" id="search-bar">
       	<div class="row">
-          <div class="col-md-4"></div>
-          <div class="input-group col-md-4">
-            <input type="text" class="form-control" placeholder="Search" />
-            <span class="input-group-btn">
-            <button class="btn" type="button">
-              <span class=" glyphicon glyphicon-search"></span>
-            </button>
-            </span>
-          </div>
+          <div class="col-md-2"></div>
+          <form>
+            <div class="input-group col-md-4">
+              <input type="text" class="form-control" id="search-text" placeholder="Search" />
+            </div>
+            <div class="input-group col-md-4">
+              <input type="text" class="form-control" id="geocomplete" placeholder="Location" />
+              </form>
+              <div class="input-group">
+                <button class="btn" type="button" id="search-btn">
+                  <span class=" glyphicon glyphicon-search"></span>
+                </button>
+                </span>
+              </div>
+            </div>
           <div class="col-md-4"></div>
       	</div>
       </div>
       <br/>
-      <div class="container">
+      <div class="container" id="menu">
         <div class="row">
-          <div class="table-responsivetable-panel panel-default">
-            <table class="table table-hover table-bordered ">
+          <div class="table-panel panel-default"> <!--table-responsive for pagination-->
+            <table class="table table-hover table-bordered" id="myTable">
               <thead>
                 <tr>
                   <th>Name</th>
@@ -53,60 +59,12 @@
                   <th>Description</th>
                 </tr>
               </thead>
-              <tbody id="myTable">
+              <tbody>
                 <tr>
                   <td>Hot Dog</td>
                   <td class="picture"><img src="hotdog.jpg" /></td>
                   <td>$3.00</td>
                   <td>A hot dog, also known as a frankfurter or wiener, is a cooked sausage, grilled and served in a partially sliced bun.</td>
-                </tr>
-                <tr>
-                  <td>Table cell</td>
-                  <td>Table cell</td>
-                  <td>Table cell</td>
-                  <td>Table cell</td>
-                </tr>
-                <tr>
-                  <td>Table cell</td>
-                  <td>Table cell</td>
-                  <td>Table cell</td>
-                  <td>Table cell</td>
-                </tr>
-                <tr>
-                  <td>Table cell</td>
-                  <td>Table cell</td>
-                  <td>Table cell</td>
-                  <td>Table cell</td>
-                </tr>
-                <tr>
-                  <td>Table cell</td>
-                  <td>Table cell</td>
-                  <td>Table cell</td>
-                  <td>Table cell</td>
-                </tr>
-                <tr>
-                  <td>Table cell</td>
-                  <td>Table cell</td>
-                  <td>Table cell</td>
-                  <td>Table cell</td>
-                </tr>
-                <tr>
-                  <td>Table cell</td>
-                  <td>Table cell</td>
-                  <td>Table cell</td>
-                  <td>Table cell</td>
-                </tr>
-                 <tr>
-                  <td>Table cell</td>
-                  <td>Table cell</td>
-                  <td>Table cell</td>
-                  <td>Table cell</td>
-                </tr>
-                <tr>
-                  <td>Table cell</td>
-                  <td>Table cell</td>
-                  <td>Table cell</td>
-                  <td>Table cell</td>
                 </tr>
                 <tr>
                   <td>Table cell</td>
@@ -122,6 +80,37 @@
           </div>
     	</div>
     </div>
+    <div class="container" id="locations">
+      <div class="row">
+        <div class="table-panel panel-default"> <!--table-responsive for pagination-->
+          <table class="table table-hover table-bordered" id="locationTable">
+            <thead>
+              <tr>
+                <th>Restaurant</th>
+                <th>Picture</th>
+                <th>Address</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>taste of india</td>
+                <td class="picture"><img src="hotdog.jpg" /></td>
+                <td>123 5th ave ne, seattle, wa 98008</td>
+              </tr>
+              <tr>
+                <td>Table cell</td>
+                <td>Table cell</td>
+                <td>Table cell</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="col-md-12 text-center">
+        <ul class="pagination pagination-lg pager" id="myPager"></ul>
+        </div>
     </div>
+  </div>
+</div>
+<script src="index.js"></script>
   </body>
 </html>

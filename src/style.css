@@ -42,10 +42,11 @@ thead {
 .table td {
   white-space: wrap;
   overflow: hidden;
-  text-overflow: clip;
   word-wrap: break-word;
 }
 
 .table-responsive {
-  height:280px;
+  height:480px;
 }
+
+.hiding { display: none; }
