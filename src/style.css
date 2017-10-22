@@ -12,3 +12,23 @@ body {
 #menu {
   width: 80%;
 }
+
+<<<<<<< Updated upstream
+.container img {
+    width: 200px;
+    height: auto;
+=======
+table, th, td {
+    border: 1px solid white;
+    border-collapse: collapse;
+}
+
+th,td {
+  padding: 15px;
+  text-align: center;
+}
+
+table{
+  border-spacing: 5px;
+>>>>>>> Stashed changes
+}
