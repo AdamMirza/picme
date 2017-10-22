@@ -12,3 +12,8 @@ body {
 #menu {
   width: 80%;
 }
+
+.container img {
+    width: 200px;
+    height: auto;
+}
