@@ -10,7 +10,7 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
   template: './src/index.html',
   filename: 'index.html',
   inject: 'body',
-  title: 'Make a Snapcode &bull; Snapchat',
+  title: 'PicoMenu',
 });
 
 const DevEnvironmentSettings = new webpack.DefinePlugin({
