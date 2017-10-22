@@ -9,6 +9,8 @@ import { configureHistory, configureStore } from './configureStoreAndHistory';
 
 import Homepage from './Homepage/containers/Homepage';
 
+import css from '../style.css';
+
 const initialState = Map();
 const store = configureStore(initialState);
 const reactRouterReduxHistory = configureHistory(store);
