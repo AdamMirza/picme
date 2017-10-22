@@ -13,6 +13,11 @@ body {
   width: 80%;
 }
 
+.container img {
+    width: 200px;
+    height: auto;
+}
+
 table, th, td {
     border: 1px solid white;
     border-collapse: collapse;
