@@ -4,7 +4,7 @@
   "description": "Boilerplate for setting up react/redux application",
   "main": "index.jsx",
   "scripts": {
-    "start": "rm -rf ./build && webpack-dev-server --env=dev --colors --hot --inline",
+    "start": "webpack-dev-server --env=dev --colors --hot --inline",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
