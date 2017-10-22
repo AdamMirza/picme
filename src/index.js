@@ -19,6 +19,7 @@ searchButton.click(function() {
 
     var settings = $.ajax({
       "async": true,
+      "crossDomain": false,
       "url": "https://api.yelp.com/v3/businesses/search",
       "data": searchData,
       "method": "GET",
